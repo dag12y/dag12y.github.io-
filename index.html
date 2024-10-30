@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dagm Yibabe - Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Dagm Yibabe</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="hero">
+            <div class="profile-image">
+                <img src="dagm.jpg" alt="Dagm Yibabe">
+            </div>
+            <h1>Hi, I'm <span class="highlight">Dagm Yibabe</span></h1>
+            <p class="title">Full Stack Developer</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I am a passionate Full Stack Developer with a strong foundation in web development. I enjoy creating efficient, user-friendly applications and am constantly learning new technologies to improve my skills.</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>Git</span>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-language project-icon"></i>
+                </div>
+                <h3>Amharic-Tigrigna Analyzer</h3>
+                <p>A Natural Language Processing tool that analyzes and compares Amharic and Tigrigna languages. Features include word frequency analysis, similarity detection, and language pattern recognition using Python's NLTK library.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>NLTK</span>
+                    <span>NLP</span>
+                    <span>Data Analysis</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/dag12y/amharic-tigrigna-analyser" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-calculator project-icon"></i>
+                </div>
+                <h3>Modern Calculator</h3>
+                <p>A sleek and responsive calculator application built with HTML, CSS, and JavaScript. Features a clean user interface with standard arithmetic operations and a modern design.</p>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Web Design</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/dag12y/calculator" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <form id="contact-form" action="mailto:dagimyibabe19@gmail.com" method="POST">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="mailto:dagimyibabe19@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/dag12y" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dagm Yibabe. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
