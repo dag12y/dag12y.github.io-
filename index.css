@@ -555,3 +555,20 @@ input:focus, textarea:focus {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Add these styles */
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Update the existing form styles */
+form button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}

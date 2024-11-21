@@ -6,6 +6,7 @@
     <title>Dagm Yibabe - Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <nav>
@@ -100,10 +101,10 @@
     <section id="contact">
         <h2>Get In Touch</h2>
         <div class="contact-content">
-            <form id="contact-form" action="mailto:dagimyibabe19@gmail.com" method="POST">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
                 <button type="submit" class="btn primary">Send Message</button>
             </form>
             <div class="social-links">

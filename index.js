@@ -32,14 +32,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Initialize EmailJS with your public key
+(function() {
+    // Replace with your actual public key from EmailJS dashboard
+    emailjs.init("403hQQyf-3iI5s6W1");
+})();
+
 // Form Submission
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        // Add your form submission logic here
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
+        
+        // Show loading state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        // Prepare the parameters - update these to match your EmailJS template variables
+        const templateParams = {
+            from_name: document.getElementById('name').value,
+            reply_to: document.getElementById('email').value,  // Changed from from_email
+            message: document.getElementById('message').value,
+            to_name: 'Dagm Yibabe'  // Add this if your template uses it
+        };
+
+        emailjs.send('service_gg1lz2q', 'template_stuomxn', templateParams)
+            .then(function() {
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            })
+            .catch(function(error) {
+                console.error('EmailJS error:', error);
+                alert('Oops! Something went wrong. Please try again later.');
+            })
+            .finally(function() {
+                // Restore button state
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
     });
 }
 
